@@ -2,11 +2,13 @@ import 'dart:ui';
 
 import 'package:airbnb/models/booking_steps.dart';
 import 'package:airbnb/shared/theme/colors.dart';
+import 'package:airbnb/widgets/select_date_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import '../widgets/select_destination_widget.dart';
+import '../widgets/select_guests_widget.dart';
 
 class BookingDetailsScreen extends StatefulWidget {
   const BookingDetailsScreen({super.key});
@@ -69,6 +71,24 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                   tag: 'search',
                   child: SelectDestinationWidget(step: step),
                 ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    step = BookingStep.selectDate;
+                  });
+                },
+                child: SelectDateWidget(step: step),
+              ),
+              (step == BookingStep.selectDate) 
+              ? const SizedBox() 
+              : GestureDetector(
+                onTap: () {
+                  setState(() {
+                    step = BookingStep.selectGuests;
+                  });
+                },
+                child: SelectGuestsWidget(step: step),
               ),
             ],
           ),

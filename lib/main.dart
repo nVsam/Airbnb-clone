@@ -1,3 +1,4 @@
+import 'package:airbnb/shared/theme/colors.dart';
 import 'package:flutter/material.dart';
 import './screens/home_screen.dart';
 import './navigation/app_router.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: appRed),
         useMaterial3: true,
       ),
       routerConfig: AppRouter().router,
