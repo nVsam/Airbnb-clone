@@ -32,7 +32,7 @@ class SelectDateWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Quando vai?',
+              'Quando é a sua viagem?',
               style:
                 Theme.of(context).textTheme.headlineSmall!.copyWith(
                   fontWeight: FontWeight.bold,
@@ -54,17 +54,17 @@ class SelectDateWidget extends StatelessWidget {
                 children: [
                   OutlinedButton(
                     onPressed: () {}, 
-                    child: const Text('Exact dates'),
+                    child: const Text('Datas exatas'),
                   ),
                   const SizedBox(width: 8.0),
                   OutlinedButton(
                     onPressed: () {}, 
-                    child: const Text('+- 1 day'),
+                    child: const Text('± 1 dia'),
                   ),
                   const SizedBox(width: 8.0),
                   OutlinedButton(
                     onPressed: () {}, 
-                    child: const Text('+- 2 days'),
+                    child: const Text('± 2 dias'),
                   ),
                 ],
               ),
@@ -75,7 +75,7 @@ class SelectDateWidget extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {}, 
-                  child: const Text('Skip'),
+                  child: const Text('Redefinir'),
                 ),
                 FilledButton(
                   onPressed: () {},
@@ -86,7 +86,7 @@ class SelectDateWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
-                  child: const Text('Next'),
+                  child: const Text('Próximo'),
                 ),
               ],
             ),
@@ -102,7 +102,7 @@ class SelectDateWidget extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           Text(
-            'I\'m flexible',
+            'Busca flexível',
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
           ),
         ],

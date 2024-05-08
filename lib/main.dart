@@ -1,6 +1,5 @@
 import 'package:airbnb/shared/theme/colors.dart';
 import 'package:flutter/material.dart';
-import './screens/home_screen.dart';
 import './navigation/app_router.dart';
 
 void main() {

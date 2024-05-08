@@ -27,7 +27,7 @@ class SelectGuestsWidget extends StatelessWidget {
         ? Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Quem vem?',
+            Text('Quem está vindo?',
             style: TextTheme.headlineSmall!.copyWith(fontWeight: FontWeight.bold)
             ),
             const SizedBox(height: 16.0),
@@ -49,7 +49,7 @@ class SelectGuestsWidget extends StatelessWidget {
                   _buildGuestsQuantitySelector(
                     context,
                     'Crianças',
-                    '3 a 12 anos',
+                    'De 2 a 12 anos',
                     () {},
                     () {},
                     '0',
@@ -58,7 +58,16 @@ class SelectGuestsWidget extends StatelessWidget {
                   _buildGuestsQuantitySelector(
                     context,
                     'Bebês',
-                    'Menor de 3 anos',
+                    'Menor de 2',
+                    () {},
+                    () {},
+                    '0',
+                  ),
+                  const Divider(),
+                  _buildGuestsQuantitySelector(
+                    context,
+                    'Animais de estimação',
+                    'Vai levar um animal de serviço?',
                     () {},
                     () {},
                     '0',

@@ -18,7 +18,7 @@ class BookingDetailsScreen extends StatefulWidget {
 }
 
 class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
-  var step = BookingStep.selectDate;
+  var step = BookingStep.selectDestination;
   @override
   Widget build(BuildContext context) {
     final TextTheme = Theme.of(context).textTheme;
@@ -40,7 +40,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
               TextButton(
                 onPressed: () {}, 
                 child: Text(
-                  'Stays',
+                  'Acomodações',
                   style: TextTheme.titleMedium!.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
@@ -49,7 +49,7 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
               TextButton(
                 onPressed: () {}, 
                 child: Text(
-                  'Experiences',
+                  'Experiências',
                   style: TextTheme.titleMedium,
                 ),
               ),
@@ -89,6 +89,52 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                   });
                 },
                 child: SelectGuestsWidget(step: step),
+              ),
+            ],
+          ),
+        ),
+        bottomNavigationBar: (step == BookingStep.selectDate)
+        ? null
+        : BottomAppBar(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          notchMargin: 0,
+          color: Colors.white,
+          surfaceTintColor: Colors.white,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextButton(
+                onPressed: () {
+                  if (step != BookingStep.selectDestination) {
+                    setState(() {
+                      step = BookingStep.selectDestination;
+                    });
+                  } 
+                  // else {
+                  //   setState(() {
+                  //     step = BookingStep.selectDestination;
+                  //   });
+                  // }
+                }, 
+                child: Text(
+                  'Remover filtros',
+                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+              FilledButton.icon(
+                onPressed: () {}, 
+                style: FilledButton.styleFrom(
+                  backgroundColor: appRed,
+                  minimumSize: const Size(100, 56.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                icon: const Icon(Icons.search),
+                label: const Text('Buscar')
               ),
             ],
           ),

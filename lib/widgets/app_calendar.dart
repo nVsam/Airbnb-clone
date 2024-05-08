@@ -160,15 +160,15 @@ class _CalendarOptionSegmentedButtonState
         segments: const <ButtonSegment<CalendarOptions>>[
           ButtonSegment<CalendarOptions>(
             value: CalendarOptions.day,
-            label: Text('Dates'),
+            label: Text('Datas'),
           ),
           ButtonSegment<CalendarOptions>(
             value: CalendarOptions.month,
-            label: Text('Months'),
+            label: Text('Meses'),
           ),
           ButtonSegment<CalendarOptions>(
             value: CalendarOptions.year,
-            label: Text('Flexible'),
+            label: Text('Flexível'),
           ),
         ],
         selected: <CalendarOptions>{calendarView},

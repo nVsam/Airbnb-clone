@@ -88,11 +88,11 @@ class SelectDestinationWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Quando',
+                'Onde',
                 style: textTheme.bodyMedium,
               ),
               Text(
-                'I\'m flexible',
+                'Busca flexível',
                 style: textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.bold,
                 ),

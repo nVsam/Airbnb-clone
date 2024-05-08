@@ -1,13 +1,11 @@
 import 'package:airbnb/models/property.dart';
-import 'package:airbnb/widgets/property_list_widget.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import '../shared/theme/colors.dart';
-import '../screens/booking_details_screen.dart';
-import '../navigation/app_router.dart';
+import '../widgets/app_nav_bar.dart';
 import '../widgets/property_type_list.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,6 +17,7 @@ class HomeScreen extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
+      bottomNavigationBar: const AppNavBar(),
       appBar: AppBar(
         toolbarHeight: 150,
         flexibleSpace: Container(
